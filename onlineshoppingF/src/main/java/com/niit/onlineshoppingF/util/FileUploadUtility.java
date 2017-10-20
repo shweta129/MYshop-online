@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class FileUploadUtility {
 
-private static final String ABS_PATH = "D:\\github\\online-shop\\onlineshoppingF\\src\\main\\webapp\\resources\\images\\";
+private static final String ABS_PATH = "D:\\github\\MYshop-online\\onlineshoppingF\\src\\main\\webapp\\resources\\images\\";
 private static String REAL_PATH = "";
 
 
