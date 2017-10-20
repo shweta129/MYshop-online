@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cofiguration>
+
+   <appennder name="consoleAppender" class="ch.qos.Logback.core.ConsoleAppender">
+     <encoder>
+       <Pattern>%-5level %msg %d{HH:mm:ss.SSS} %logger{36} %n</Pattern>
+     
+     </encoder>
+   
+   </appennder>
+   
+   <logger name="com.niit" level="DEBUG" additivity = "false">
+    <appender-ref ref="consoleAppender"/>
+   
+   </logger>
+   
+   
+   <root level="INFO">
+       <appender-ref ref="consoleAppender"/>
+   </root>
+
+
+
+
+</cofiguration>
