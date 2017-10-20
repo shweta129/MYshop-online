@@ -27,11 +27,11 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 	
 	</user-service> 
 	
-	<!-- <jdbc-user-service data-source-ref="myDataSource"
+	<jdbc-user-service data-source-ref="myDataSource"
 	 users-by-username-query="select email,password,enabled from user_detail"
 	 authorities-by-username-query="select email, role from user_detail where email = ?"
 	 />
-	 -->
+	 
 	
 </authentication-provider>
 </authentication-manager>	
