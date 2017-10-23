@@ -122,6 +122,33 @@ assertEquals("Failed to add user!",true,userDAO.addUser(user));
 }
 	*/
 	
+	@Test
+	public  void testAdd() {
+		
+		user = new User();
+		user.setFirstName("");
+		user.setLastName("koholi");
+		user.setEmail("v@gmail.com");
+		user.setContactNumber("1234512345");
+		user.setRole("USER");
+		user.setPassword("12345");
+		
+
+if(user.getRole().equals("USER")) {
+    	 
+    	 //create a cart for this user
+    	 cart = new Cart();
+    	 
+    	 cart.setUser(user);
+    	 
+    	 //attach cart with user
+   	  user.setCart(cart);   	 
+}
+
+//add the user
+assertEquals("Failed to add user!",true,userDAO.addUser(user));
+}
+	
 	
 /*@Test
 	
