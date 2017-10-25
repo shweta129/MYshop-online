@@ -7,7 +7,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         
-        <a class="navbar-brand" href="${contextRoot}/home">Online Shopping</a>
+        <a class="navbar-brand" href="${contextRoot}/home">ECOM Shopping</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
            <!--   <li class="nav-item active" id="home">
