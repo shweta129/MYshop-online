@@ -88,7 +88,7 @@
          <sf:input type="text" path="country" class="form-control"
           placeholder="Enter Country Name" />
         
-	         <%-- <sf:errors path="country" cssClass="help-block" element="em"/> --%> 
+	          <sf:errors path="country" cssClass="help-block" element="em"/>  
         
         </div>
        </div>

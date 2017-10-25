@@ -23,7 +23,7 @@ public class HibernateConfig
 {
 
 	public static Logger logger = Logger.getLogger("HibernateConfig");
-	@Bean(name="myDataSource")//this bean available for security purpose
+	@Bean(name="dataSource")//this bean available for security purpose
 	
 	public DataSource getDataSource()
 	

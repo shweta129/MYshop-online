@@ -31,18 +31,18 @@ public class Address implements Serializable {
 	
 /*---------*/
 	
-	@ManyToOne
-	private User user;
 	
-	public User getUser() {
-		return user;
+	
+	
+	@Column(name = "user_id")
+	private int userId;
+	
+	public int getUserId() {
+		return userId;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
-	
-	
-	
 	
 	
 
@@ -129,13 +129,13 @@ public class Address implements Serializable {
 	 * toString for logging and debugging activity
 	 */
 	
+	
 	@Override
 	public String toString() {
-		return "Address [id=" + id + ", user=" + user + ", addressLineOne=" + addressLineOne + ", addressLineTwo="
+		return "Address [id=" + id + ", userId=" + userId + ", addressLineOne=" + addressLineOne + ", addressLineTwo="
 				+ addressLineTwo + ", city=" + city + ", state=" + state + ", country=" + country + ", postalCode="
 				+ postalCode + ", shipping=" + shipping + ", billing=" + billing + "]";
 	}
-    
 	
 
 }

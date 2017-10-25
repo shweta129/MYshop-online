@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "user_details")
@@ -40,6 +41,24 @@ public class User implements Serializable {
 	private boolean enabled = true;
 	
 	
+	//confirm password transient field
+	@Transient
+	private String confirmPassword;
+	
+	//getter setter method
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
+
+
 	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)//cascade tell what is attached to the child record
 	private Cart cart;
 	

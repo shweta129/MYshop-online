@@ -1,0 +1,53 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" 
+             xmlns:context="http://www.springframework.org/schema/context" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="http://www.springframework.org/schema/beans 
+             http://www.springframework.org/schema/beans/spring-beans.xsd 
+             http://www.springframework.org/schema/context 
+             http://www.springframework.org/schema/context/spring-context.xsd 
+             http://www.springframework.org/schema/security 
+             http://www.springframework.org/schema/security/spring-security.xsd">
+  
+  
+  <context:component-scan base-package="com.niit.onlineshoppingB"/>
+  
+  
+  
+  
+  <http>
+  <intercept-url pattern="/**" access="hasAuthority('USER')" /> 
+  <form-login login-page="/login" /> 
+  <logout /> 
+  </http>
+  
+  <authentication-manager>
+ <authentication-provider>
+ 
+ <jdbc-user-service data-source-ref="dataSource"
+ 
+    users-by-username-query="select email, password, enabled from user_details where email = ?"
+    authorities-by-username-query="select email, role from user_details where email = ?"
+  
+ />
+ 
+  </authentication-provider>
+  </authentication-manager>
+  
+  
+  
+  
+  
+  </beans:beans>
+  
+  
+  
+  <!-- <html><head><title>Login Page</title></head><body onload='document.f.username.focus();'>
+<h3>Login with Username and Password</h3><form name='f' action='/onlineshoppingF/login' method='POST'>
+<table>
+	<tr><td>User:</td><td><input type='text' name='username' value=''></td></tr>
+	<tr><td>Password:</td><td><input type='password' name='password'/></td></tr>
+	<tr><td colspan='2'><input name="submit" type="submit" value="Login"/></td></tr>
+	<input name="_csrf" type="hidden" value="f5939f93-e7e2-40c0-aeeb-adec206fead4" />
+</table>
+</form></body></html> -->

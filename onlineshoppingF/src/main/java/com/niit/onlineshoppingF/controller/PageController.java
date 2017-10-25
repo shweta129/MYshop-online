@@ -137,7 +137,7 @@ public class PageController
 	 
  }
  
- 
+ //having similar mapping to our flow id
  @RequestMapping(value= "/register")
  public ModelAndView register()
 	{
@@ -147,6 +147,23 @@ public class PageController
 		
 		return mv;
 	}
+ 
+ 
+ 
+ // mapping for login
+ 
+ @RequestMapping(value= "/login")
+ public ModelAndView login()
+	{
+		ModelAndView mv=new ModelAndView("login");
+		
+		mv.addObject("title","Login");
+		return mv;
+	}
+ 
+ 
+ 
+ 
  
  
  
