@@ -8,7 +8,7 @@ CREATE TABLE category (
 
 );
 
-CREATE TABLE user_detail (
+CREATE TABLE user_details (
 	id IDENTITY,
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
@@ -72,7 +72,7 @@ INSERT INTO category (name, description,image_url,is_active) VALUES ('Mobile', '
 -- adding three users 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Virat', 'Kohli', 'ADMIN', true, '$2a$06$W4wwF/YpQDo2R0dqmuCQZuucz6Zziu1nz4QW3CcXU55v52pSLZRo2', 'vk@gmail.com', '8888888888');
+VALUES ('Virat', 'Kohli', 'ADMIN', true, '$2a$10$1pyqGzJ.lhhhTMvazwzdQu9KE7qjjTpo1OGrcEly6z2C/8icI0c8C', 'vk@gmail.com', '8888888888');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
 VALUES ('Ravindra', 'Jadeja', 'SUPPLIER', true, '$2a$06$tDhJUf7ZVvvHg753qrKHC.tNL27ubll6ynmLnkmGnZ1JPBsY9lLNO', 'rj@gmail.com', '9999999999');
