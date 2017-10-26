@@ -27,7 +27,6 @@ public interface UserDAO {
 			
 			
 			
-			//update a cart
-			boolean updateCart(Cart cart);
+			
 
 }

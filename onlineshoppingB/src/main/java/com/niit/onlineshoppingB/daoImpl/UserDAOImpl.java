@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.onlineshoppingB.dao.UserDAO;
 import com.niit.onlineshoppingB.dto.Address;
-import com.niit.onlineshoppingB.dto.Cart;
 import com.niit.onlineshoppingB.dto.User;
 
 
@@ -52,21 +51,7 @@ try {
 		}
 	}
 
-	@Override
-	public boolean updateCart(Cart cart) {
-		
 	
-try {
-			
-			SessionFactory.getCurrentSession().update(cart);
-			return true;
-		}
-		catch(Exception ex) {
-			ex.printStackTrace();
-			return false;	
-		}
-	}
-
 	//@Override
 	public User getByEmail(String email) {
 		String selectQuery = "FROM User WHERE email = :email";		
@@ -79,7 +64,7 @@ try {
 			
 		}
 		catch(Exception ex) {
-			ex.printStackTrace();
+			//ex.printStackTrace();
 			return null;
 		}
 		
