@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
 public class Cart implements Serializable{
@@ -25,24 +26,6 @@ public class Cart implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
-
-	/*-----*/
-	
-	@OneToOne
-	private User user;
-	
-	
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-/*-----------*/
-
-
 	@Column(name = "grand_total")
 	private double grandTotal;
 	@Column(name = "cart_lines")
@@ -84,12 +67,19 @@ public class Cart implements Serializable{
 	 * 
 	 * to string for logging and debugging activity
 	 */
-	
-	
 	@Override
 	public String toString() {
-		return "Cart [id=" + id + ", user=" + user + ", grandTotal=" + grandTotal + ", cartLines=" + cartLines + "]";
+		return "Cart [id=" + id + ", grandTotal=" + grandTotal + ", cartLines=" + cartLines + ", user=" + user + "]";
 	}
 	
-
+	
+	
+	@OneToOne
+	private User user;
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 }

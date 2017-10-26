@@ -127,8 +127,8 @@ assertEquals("Failed to add user!",true,userDAO.addUser(user));
 		
 		user = new User();
 		user.setFirstName("");
-		user.setLastName("koholi");
-		user.setEmail("v@gmail.com");
+		user.setLastName("sam");
+		user.setEmail("s@gmail.com");
 		user.setContactNumber("1234512345");
 		user.setRole("USER");
 		user.setPassword("12345");
@@ -243,7 +243,7 @@ assertEquals("Failed to add user!",true,userDAO.addUser(user));
 				
 			}*/
 	
-	@Test
+	//@Test
 	public void testGetAddresses() {
 		
 		user = userDAO.getByEmail("hr@gmail.com");
