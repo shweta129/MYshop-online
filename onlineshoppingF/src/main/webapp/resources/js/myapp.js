@@ -153,54 +153,51 @@ var $table = $('#productListTable');
 	}
 	
 	
-});
+	//---------------
 
-
-//---------------
-
-$('switch input[type="checkbox"]').on('change',function(){
-	
-	var checkbox = $(this);
-	var checked = checkbox.prop('checked');
-	var dMsg =(checked)? 'You want to activate the product?':
-		                  'You want to deactivate the product?';
-	var value = checkbox.prop('value');
-	
-	bootbox.confirm({
+	$('.switch input[type="checkbox"]').on('change',function(){
 		
-	size: 'medium',
-	title: 'Product Activation & Deactivation',
-	message: dMsg,
-	callback:function(confirmed) {
+		var checkbox = $(this);
+		var checked = checkbox.prop('checked');
+		var dMsg = (checked)? 'You want to activate the product?':
+			                  'You want to deactivate the product?';
+		var value = checkbox.prop('value');
 		
-		
-		if(confirmed) {
+		bootbox.confirm({
 			
-		  console.log(value);
-		  bootbox.alert({
-		  size:'medium',
-		  title: 'Information',
-		  message:'You are going to perform operation on product' + value
-          });
+		size: 'medium',
+		title: 'Product Activation & Deactivation',
+		message: dMsg,
+		callback:function(confirmed) {
 			
 			
-		}else{
-			checkbox.prop('checked', !checked);
+			if(confirmed) {
+				
+			  console.log(value);
+			  bootbox.alert({
+			  size:'medium',
+			  title: 'Information',
+			  message: 'You are going to perform operation on product' + value
+	          });
+				
+				
+			}else{
+				checkbox.prop('checked', !checked);
+			}
+
 		}
+		
+		});
+		
 
-	}
-	
 	});
 	
 	
-
-
-
-
-
-
-
+	
 });
+
+
+
 
 
 
