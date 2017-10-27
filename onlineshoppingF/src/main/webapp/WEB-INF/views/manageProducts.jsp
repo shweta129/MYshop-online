@@ -148,15 +148,15 @@
 		       <td>2</td>
 		       <td>
 		       
-		          <img class="adminDataTableImg" src="${contextRoot}/resources/images/PRD0536CAC841.jpg"
-		          alt="Macbook Pro"/>
+		          <img class="adminDataTableImg" src="${contextRoot}/resources/images/PRDCEABCFD89A.jpg"
+		          alt="Laptop"/>
 		       
 		       </td>
-		       <td>Macbook Pro</td>
+		       <td>Laptop</td>
 		       <td>Apple</td>
                <td>5</td>
                
-		       <td>&#8377; 1111.0/-</td>                         
+		       <td>&#8377; 67770.0/-</td>                         
 		       <td>
 		       <!-- toggle Switch -->
 		       <label class="switch">
@@ -171,23 +171,23 @@
 		       </a>
 		       </td>
 		      
+		     </tr>
+		     
+		     
+		     
 		     <tr>
-		     
-		     
-		     
-		       <tr>
 		       <td>2</td>
 		       <td>
 		       
-		          <img class="adminDataTableImg" src="${contextRoot}/resources/images/PRD0536CAC841.jpg"
-		          alt="Macbook Pro"/>
+		          <img class="adminDataTableImg" src="${contextRoot}/resources/images/PRDCEABCFD89A.jpg"
+		          alt="Laptop"/>
 		       
 		       </td>
-		       <td>Macbook Pro</td>
+		       <td>Laptop</td>
 		       <td>Apple</td>
                <td>5</td>
                
-		       <td>&#8377; 1111.0/-</td>                         
+		       <td>&#8377; 67770.0/-</td>                         
 		       <td>
 		       <!-- toggle Switch -->
 		       <label class="switch">
@@ -202,9 +202,9 @@
 		       </a>
 		       </td>
 		      
-		     <tr>
+		     </tr>
 		     
-		     
+		       
 		     
 		     
 	     </tbody>
