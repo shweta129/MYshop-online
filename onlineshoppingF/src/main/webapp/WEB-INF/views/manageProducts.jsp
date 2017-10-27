@@ -142,7 +142,7 @@
 		      </tr>
 		     </thead>
 		     
-		  <tbody>
+		 <%--  <tbody>
 		     
 		     <tr>
 		       <td>2</td>
@@ -207,7 +207,7 @@
 		       
 		     
 		     
-	     </tbody>
+	     </tbody> --%>
 		     
 		     
 		      <tfoot>
