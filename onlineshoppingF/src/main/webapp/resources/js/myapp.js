@@ -157,7 +157,7 @@ var $table = $('#productListTable');
 	
 	//---------------
 
-	$('.switch input[type="checkbox"]').on('change',function(){
+	/*$('.switch input[type="checkbox"]').on('change',function(){
 		
 		var checkbox = $(this);
 		var checked = checkbox.prop('checked');
@@ -193,7 +193,7 @@ var $table = $('#productListTable');
 		
 
 	});
-	
+	*/
 	//------------------
 	//data table for admin
 	//------------------
@@ -284,14 +284,66 @@ var $adminProductsTable = $('#adminProductsTable');
 			        	 mRender: function(data,type,row) {
 			        		 
 			        		 var str = '';
-			        		 str +='<a href="${contextRoot}/manage/'+data+'/product" class="btn btn-warning">';
+			        		 str +='<a href="'+window.contextRoot+'/manage/'+data+'/product" class="btn btn-warning">';
 		                     str +='<span class="glyphicon glyphicon-pencil"></span></a>';
 		       
 			        		 return str;
 			        	 }
 			        	  
 			          }
-			          ]
+			          ],
+			          
+			       initComplete: function() {
+			    	   
+			    	   var api =this.api();
+			    	   api.$('.switch input[type="checkbox"]').on('change',function(){
+			    			
+			    			var checkbox = $(this);
+			    			var checked = checkbox.prop('checked');
+			    			var dMsg = (checked)? 'You want to activate the product?':
+			    				                  'You want to deactivate the product?';
+			    			var value = checkbox.prop('value');
+			    			
+			    			bootbox.confirm({
+			    				
+			    			size: 'medium',
+			    			title: 'Product Activation & Deactivation',
+			    			message: dMsg,
+			    			callback:function(confirmed) {
+			    				
+			    				
+			    				if(confirmed) {
+			    					
+			    				  console.log(value);
+			    				  
+			    				  var activationUrl = window.contextRoot + '/manage/product/' + value+ '/activation';
+			    				  
+			    				  $.post(activationUrl, function(data){
+			    					  
+			    					  bootbox.alert({
+					    				  size:'medium',
+					    				  title: 'Information',
+					    				  message: data
+					    		          });
+			    				  })
+			    				  
+ 			    				  
+			    				  
+			    					
+			    					
+			    				}else{
+			    					checkbox.prop('checked', !checked);
+			    				}
+
+			    			}
+			    			
+			    			});
+			    			
+
+			    		});
+			    		
+			    	   
+			       }
 		});
 		
 		

@@ -108,7 +108,15 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="${js}/jquery.js"></script>
+           <!-- JQuery validation -->
+    <script src="${js}/jquery.validate.js"></script>
+    
+    <script src="${js}/jquery.js"></script>
+    
     <script src="${js}/popper.min.js"></script>
+    
+
+    <!-- Bootstrap Core javaScript -->
      <script src="${js}/bootstrap.min.js"></script>
      
     <script src="${js}/jquery.dataTables.js"></script>

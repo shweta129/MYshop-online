@@ -12,9 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.onlineshoppingB.dao.CategoryDAO;
@@ -60,8 +62,30 @@ public class ManagementController {
 				
 				mv.addObject("message", "Product Submitted Successfully");
 			}
+			else if(operation.equals("category"))
+			{
+				mv.addObject("message","Category Submitted Successfully!");
+				
+			}
 		}
 		
+		 return mv;
+		 
+	}
+	
+	
+	@RequestMapping(value="/{id}/product",method=RequestMethod.GET)
+	public ModelAndView showEditProduct(@PathVariable int id) {
+		  
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("userClickManageProducts", true);
+		mv.addObject("title","Manage Products");
+		//fetch the product from the database
+		Product nProduct = productDAO.get(id);
+	    //set the product fetch from the database
+		mv.addObject("product",nProduct);
+	
 		 return mv;
 		 
 	}
@@ -73,8 +97,29 @@ public class ManagementController {
 			HttpServletRequest request)
 	{
 		
+		//handling image validation for new products
+		if(mProduct.getId() == 0){
 		new ProductValidator().validate(mProduct, results);
+		}
 		
+		//if user choose wrong file the esle part
+		else{
+			
+			if(!mProduct.getFile().getOriginalFilename().equals(""))
+			{
+				new ProductValidator().validate(mProduct, results);
+			}
+		}
+		
+		/*if(mProduct.getId()==0){
+			new ProductValidator().validate(mProduct, results);
+		}
+		else{
+			if(!mProduct.getFile().getOriginalFilename().equals("")){
+				new ProductValidator().validate(mProduct, results);
+			}
+		}
+		*/
 		
 		//check if there are any errors
 		
@@ -89,7 +134,16 @@ public class ManagementController {
 		}
 		logger.info(mProduct.toString());
 		
-		// create new product record
+		
+		if(mProduct.getId() == 0){
+			// create new product record if id is 0
+			productDAO.add(mProduct);
+			
+		}
+		else{
+			//update the product if id is not 0
+			productDAO.update(mProduct);
+		}
 		productDAO.add(mProduct);
 		
 		
@@ -101,6 +155,31 @@ public class ManagementController {
 	}
 	
 	
+	@RequestMapping(value = "/product/{id}/activation", method=RequestMethod.POST)
+	@ResponseBody
+	public String handleProductActivation(@PathVariable int id)  {
+		//is going to fetch the product from the database
+		Product product = productDAO.get(id);
+		boolean isActive = product.isActive();
+		//activate and deactivate based on the value of the active field
+		product.setActive(!product.isActive());
+		//updating the product
+		productDAO.update(product);
+		
+		
+		return (isActive)? 
+				"You have successfully deactivated the product with id " + product.getId()
+				: "You have successfully activated the product with id " + product.getId();
+	} 
+	
+	//to handle category submission
+	@RequestMapping(value="/category", method = RequestMethod.POST)
+	public String handleCategorySubmission(@ModelAttribute Category category) {
+		//add the new category
+		categoryDAO.add(category);
+		
+		return "redirect:/manage/products?operation=category";
+	}
 	
 	
 	
@@ -108,13 +187,13 @@ public class ManagementController {
 	
 	@ModelAttribute("categories")
 	public List<Category> getCategories() {
-		
-		
-		return categoryDAO.list();
-		
-		
+     return categoryDAO.list();
 	}
 	
-	
+	@ModelAttribute("category")
+	public Category getCategory()
+	{
+		return new Category();
+	}
 
 }
