@@ -5,108 +5,48 @@
 
 
 
-<div class="container"> 
-		<h3>About Us</h3>
-		<div class="about-info">
-			<div class="col-md-8 about-grids">
-				<h4>Our latest collection</h4>
-				<p>Dignissimos at vero eos et accusamus et iusto odio ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecat officia. </p>		
-					<div class="about-w3ls-row">
-						<script type="text/javascript">
-								 $(window).load(function() {
-									$("#flexiselDemo3").flexisel({
-										visibleItems:2,
-										animationSpeed: 1000,
-										autoPlay: false,
-										autoPlaySpeed: 3000,    		
-										pauseOnHover: true,
-										enableResponsiveBreakpoints: true,
-										responsiveBreakpoints: { 
-											portrait: { 
-												changePoint:480,
-												visibleItems:2
-											}, 
-											landscape: { 
-												changePoint:640,
-												visibleItems:2
-											},
-											tablet: { 
-												changePoint:768,
-												visibleItems:2
-											}
-										}
-									});
-									
-								});
-						</script>
-						<script type="text/javascript" src="js/jquery.flexisel.js"></script> 
-						<ul id="flexiselDemo3">
-							<li>
-								<img src="images/a1.jpg" class="img-responsive" alt="" />
-							</li>
-							<li> 
-								<img src="images/a2.jpg" class="img-responsive" alt="" />
-							</li>
-							<li> 
-								<img src="images/a3.jpg" class="img-responsive" alt="" />
-							</li>
-							<li> 
-								<img src="images/a4.jpg" class="img-responsive" alt="" />
-							</li>
-						</ul> 
-						<div class="clearfix"> </div>
-					</div>
+<div class="container">
+		<div class="jumbotron jumbotron-sm"
+			style="background-color: gray; margin-top: 2%; color: white;">
+			<div class="row">
+				<div class="col-sm-12 col-lg-12">
+					<h1 class="h2" style="margin-top: -2%">ABOUT ECOM</h1>
+					<p>Founded in 1994 and ECOM has grown to be a Fortune 100 company. About Us | Careers | Press Releases | Gift a Smile</p>
+				</div>
 			</div>
-			<div class="col-md-4 about-grids">
-					<h4>Our Advantages</h4>
-					<div class="pince">
-						<div class="pince-left">
-							<h5>01</h5>
-						</div>
-						<div class="pince-right">
-							<p>Vero vulputate enim non justo posuere phasellus eget  mauris.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="pince">
-						<div class="pince-left">
-							<h5>02</h5>
-						</div>
-						<div class="pince-right">
-							<p>Vero vulputate enim non justo posuere phasellus eget  mauris.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="pince">
-						<div class="pince-left">
-							<h5>03</h5>
-						</div>
-						<div class="pince-right">
-							<p>Vero vulputate enim non justo posuere phasellus eget  mauris.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="pince">
-						<div class="pince-left">
-							<h5>04</h5>
-						</div>
-						<div class="pince-right">
-							<p>Vero vulputate enim non justo posuere phasellus eget  mauris.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="well">
+					<h3 style="line-height: 20%;">
+						<i class="fa fa-home fa-1x"
+							style="line-height: 6%; color: #339966"></i> Address:
+					</h3>
+					<p style="margin-top: 6%; line-height: 35%">Thane wast, Mumbai, Maharashtra 400077</p>
+					<br /> <br />
+					<h3 style="line-height: 20%;">
+						<i class="fa fa-envelope fa-1x"
+							style="line-height: 6%; color: #339966"></i> Website:
+					</h3>
+					<p style="margin-top: 6%; line-height: 35%"> http://www.Ecom.com</p>
+					<br /> <br />
+					<h3 style="line-height: 20%;">
+						<i class="fa fa-user fa-1x"
+							style="line-height: 6%; color: #339966"></i>Contact No:
+					</h3>
+					<p style="margin-top: 6%; line-height: 35%">022 4227 7600</p>
+					<br /> <br />
+
+				</div>
 			</div>
-			<div class="clearfix"> </div>
+			<div class="col-sm-6">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.515356644878!2d72.90626651446814!3d19.085034487082705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x115aee64e1f6d9bd%3A0x425dcdb25e51d0f5!2sNIIT!5e0!3m2!1sen!2sin!4v1496077480201" width="550" height="390" frameborder="0" style="border:0" allowfullscreen></iframe>
+				
+			</div>
 		</div>
 	</div>
-</div>
 
-
-	<h1>Visit Google Map</h1>
-	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.863460324873!2d72.86754521446862!3d19.113644987066326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83c05b7fc89%3A0xbe87eb057f3aafda!2sAndheri%2C+Maharashtra+400047!5e0!3m2!1sen!2sin!4v1491396579290"
-		width="600" height="450" frameborder="0" style="border: 0"
-		allowfullscreen></iframe>
 		<br>
 		<br>
 		<br>

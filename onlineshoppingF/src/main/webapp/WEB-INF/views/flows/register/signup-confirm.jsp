@@ -82,4 +82,4 @@
 	</div>
  </div> 
  <br><br><br><br><br><br><br><br><br>
-<%@include file="../shared/flows-footer.jsp"%><br><br><br><br><br><br><br><br><br>
+<%@include file="../shared/flows-footer.jsp"%>

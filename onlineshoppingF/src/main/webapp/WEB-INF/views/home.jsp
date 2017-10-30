@@ -74,7 +74,7 @@
   <div class="carousel-inner">
     <div class="item active">
       <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
-             </div>
+    </div>
 
     <div class="item">
      <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
@@ -108,7 +108,7 @@
                     <a href="#">Item One</a>
                   </h4>
                   <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <p class="card-text">Atractive laptops here, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -124,7 +124,7 @@
                     <a href="#">Item Two</a>
                   </h4>
                   <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                  <p class="card-text">Actractive Tv here, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -139,8 +139,8 @@
                   <h4 class="card-title">
                     <a href="#">Item Three</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5>$2489.99</h5>
+                  <p class="card-text">Atractive Mobile here, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -155,8 +155,8 @@
                   <h4 class="card-title">
                     <a href="#">Item Four</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5>$5524.99</h5>
+                  <p class="card-text">Atractive MP3 players here, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -171,8 +171,8 @@
                   <h4 class="card-title">
                     <a href="#">Item Five</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                  <h5>$2657.99</h5>
+                  <p class="card-text">Atractive speakers here, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -187,8 +187,8 @@
                   <h4 class="card-title">
                     <a href="#">Item Six</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5>$2477.99</h5>
+                  <p class="card-text">Atractive DSLR here, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
