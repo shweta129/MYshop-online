@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.onlineshoppingB.dao.CartItemDAO;
+import com.niit.onlineshoppingB.dao.UserOrderDAO;
 import com.niit.onlineshoppingB.daoImpl.CartItemDAOImpl;
 import com.niit.onlineshoppingB.daoImpl.UserOrderDAOImpl;
 import com.niit.onlineshoppingB.dto.Cart;
@@ -16,9 +18,9 @@ import com.niit.onlineshoppingB.dto.UserOrder;
 public class UserOrderController {
 
 	@Autowired
-	 UserOrderDAOImpl userorderDAOImpl;
+	 UserOrderDAO userorderDAO;
 	 @Autowired
-	 CartItemDAOImpl cartitemDAOImpl;
+	 CartItemDAO cartitemDAO;
 
 	 @RequestMapping("/cart/{cartid}/order")
 		public ModelAndView createOrder(@PathVariable int cartid,Model model)
@@ -26,14 +28,14 @@ public class UserOrderController {
 			   ModelAndView mv=new ModelAndView("page");
 			   mv.addObject("userClickOrder", true);
 			   mv.addObject("title", "Order");
-				Cart cart=cartitemDAOImpl.getCart(cartid);
+				Cart cart=cartitemDAO.getCart(cartid);
 				User user=cart.getUser();
 			    cart.setUser(user);
-			UserOrder userorder=userorderDAOImpl.createOrder(cart);
+			UserOrder userorder=userorderDAO.createOrder(cart);
 			model.addAttribute("cart",cart);
 			model.addAttribute("order",userorder);
 			model.addAttribute("cartid",cartid);
-		//	return "orderdetails";
+		
 			return mv;
 		}
 		
@@ -47,7 +49,7 @@ public class UserOrderController {
 			   model.addAttribute("order",order);
 			  
 			   
-			cartitemDAOImpl.removeAllCartItem(cartid);
+			cartitemDAO.removeAllCartItem(cartid);
 			//return "thanks";
 		   return mv;
 		}

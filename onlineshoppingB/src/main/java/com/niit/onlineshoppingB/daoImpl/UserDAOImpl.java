@@ -1,5 +1,6 @@
 package com.niit.onlineshoppingB.daoImpl;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,6 +85,36 @@ try {
 
 
 
+
+	@Override
+    @SuppressWarnings("deprecation")
+	public User validateEmail(String email) {
+		Session session=SessionFactory.getCurrentSession();
+		 @SuppressWarnings("rawtypes")
+		 Query query=session.createQuery("from User where email=?");
+		 query.setString(0, email);
+		 User user=(User) query.uniqueResult(); 
+		return user;
+	}
+
+
+
+
+	@Override
+	@SuppressWarnings("deprecation")
+	public User validatecontactNumber(String contactNumber) {
+		Session session=SessionFactory.getCurrentSession();
+		 @SuppressWarnings("rawtypes")
+		 Query query=session.createQuery("from User where contactNumber=?");
+		 query.setString(0, contactNumber);
+		 User user=(User) query.uniqueResult(); 
+		return user;
+	}
+
+
+
+
+	
 
 
 	

@@ -94,11 +94,27 @@
     
     
     
-   <!--Load only when user click manage product -->
+   <!--Load only when user click Show cart -->
     
     <c:if test="${userClickShowCart=='true'}">  <!-- get the user from the controller -->
     <%@include file="cart.jsp"%>
     </c:if> 
+    
+    
+    
+    <!--Load only when user click Register -->
+    
+    <c:if test="${userClickShowRegister=='true'}">  <!-- get the user from the controller -->
+    <%@include file="Register.jsp"%>
+    </c:if> 
+    
+   
+   <!--Load only when user click Signup -->
+    
+    <c:if test="${userClickSignup=='true'}">  <!-- get the user from the controller -->
+    <%@include file="signup.jsp"%>
+    </c:if>  
+    
     
     
     <!-- Footer -->

@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.onlineshoppingB.dao.CartItemDAO;
 import com.niit.onlineshoppingB.dao.CategoryDAO;
 import com.niit.onlineshoppingB.dao.ProductDAO;
+import com.niit.onlineshoppingB.dao.UserDAO;
+import com.niit.onlineshoppingB.dao.UserOrderDAO;
 import com.niit.onlineshoppingB.dto.Category;
 import com.niit.onlineshoppingB.dto.Product;
 import com.niit.onlineshoppingF.exception.ProductNotFoundException;
@@ -31,6 +34,13 @@ public class PageController
 	@Autowired
 	private ProductDAO productDAO;
 	
+	@Autowired
+	private UserDAO userDAO;
+	
+	@Autowired
+	private UserOrderDAO userOrderDAO;
+	
+	@Autowired CartItemDAO cartItemDAO;
  @RequestMapping(value= {"/", "/home", "/index"})
  public ModelAndView index()
 	{
@@ -185,7 +195,7 @@ public class PageController
 	}
  
  
- 
+
 
    
  

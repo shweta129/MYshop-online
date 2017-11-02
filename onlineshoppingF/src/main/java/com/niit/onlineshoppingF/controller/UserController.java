@@ -64,11 +64,28 @@ public class UserController {
 		muser.setConfirmPassword(confirmPassword);
 		
 	
+		
+		
+		userDAO.validateEmail(email);
+		if(muser!=null)
+		{
+			model.addAttribute("duplicateEmail","Email already exists!Please enter different Email Id!");
+		}
+
+	    
+		userDAO.validatecontactNumber(contactNumber);
+		if(muser!=null)
+		{
+		    model.addAttribute("duplicateCustomername","contactNumber already exists!Please enter different contactNumber");	
+		}
+		
+
+		
 		userDAO.addUser(muser);
 		//List<UserDetail> list = userdetailDAO.getUserDetailDetails();
 		//m.addAttribute("UserDetail", list);
 
 		System.out.println("---User Added----");
-		return "redirect:/register/user?operation=userdetail";
+		return "redirect:/register/user?operation=user";
 	}
 }
