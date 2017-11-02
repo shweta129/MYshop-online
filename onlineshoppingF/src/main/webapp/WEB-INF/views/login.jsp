@@ -22,13 +22,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ECOM Shopping - ${title}</title>
+    <%-- <title>ECOM Shopping - ${title}</title>
     <script>
     window.menu = '${title}';
     window.contextRoot = '${contextRoot}'
-    </script>
+    </script> --%>
     
-
+    <!-- Navigation -->
+    <%@include file="./shared/navbar.jsp"%>
+    
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet"> 
 

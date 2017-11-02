@@ -16,20 +16,24 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>-->
+          
             <li class="nav-item" id="about">
               <a class="nav-link" href="${contextRoot}/about">About Us</a>
             </li>
+           
             
             
-            
+           
             <li class="nav-item" id="contact">
               <a class="nav-link" href="${contextRoot}/contact">Contact</a>
             </li>
+            
             
             <li class="nav-item" id="ListProducts">
               <a class="nav-link" href="${contextRoot}/show/all/products">View Products</a>
             </li>
             
+            <!-- manage Product -->
             <c:if test = "${pageContext.request.userPrincipal.name!=null}">
             <security:authorize access="hasAuthority('ADMIN')">
             
@@ -40,7 +44,31 @@
             </c:if>
            </ul>
           
+          <!-- this is for cart -->
+          
+          <security:authorize access="hasAuthority('USER')">
+       <li id="cart"><a href="${contextRoot}/cart/getcart"><i class="material-icons"> welcome </i></a></li> 
+      	</security:authorize>
+          
+          <!-- this is for login -->
+          
           <ul class="nav navbar-nav navbar-right">
+		<c:if test="${pageContext.request.userPrincipal.name==null }">
+		<li id=myaccount class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li id=signup><a href="${contextRoot}/register/user">Sign Up</a></li>
+            <li id=login><a href="${contextRoot}/login">Login</a></li>
+          </ul>
+        </li>
+       </c:if> 
+        
+        <c:if test="${pageContext.request.userPrincipal.name!=null }">
+        <li id=logout><a href="${contextRoot}/j_spring_security_logout">Logout</a></li>
+        </c:if>
+        </ul>
+         <%--  <ul class="nav navbar-nav navbar-right">
             <security:authorize access="isAnonymous()">
             <li class="nav-item" id="register">
               <a class="nav-link" href="${contextRoot}/register">Sign Up</a>
@@ -48,7 +76,7 @@
             <li class="nav-item" id="login">
               <a class="nav-link" href="${contextRoot}/login">Login</a>
             </li>
-            </security:authorize>
+            </security:authorize> --%>
             
             <security:authorize access="isAuthenticated()">
             

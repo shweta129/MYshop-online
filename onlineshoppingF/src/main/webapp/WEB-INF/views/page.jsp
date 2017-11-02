@@ -104,9 +104,9 @@
     
     <!--Load only when user click Register -->
     
-    <c:if test="${userClickShowRegister=='true'}">  <!-- get the user from the controller -->
+   <%--  <c:if test="${userClickShowRegister=='true'}">  <!-- get the user from the controller -->
     <%@include file="Register.jsp"%>
-    </c:if> 
+    </c:if>  --%>
     
    
    <!--Load only when user click Signup -->
@@ -115,6 +115,12 @@
     <%@include file="signup.jsp"%>
     </c:if>  
     
+    
+    <!--Load only when user click Order -->
+    
+    <c:if test="${userClickOrder=='true'}">  <!-- get the user from the controller -->
+    <%@include file="Order.jsp"%>
+    </c:if>  
     
     
     <!-- Footer -->
