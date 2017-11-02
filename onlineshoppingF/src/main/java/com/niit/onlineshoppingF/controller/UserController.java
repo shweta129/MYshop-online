@@ -51,7 +51,7 @@ public class UserController {
 			@RequestParam("email") String email,@RequestParam("contactNumber") String contactNumber,
 		    @RequestParam("password") String password,
 			@RequestParam("address") String address,
-			@RequestParam("confirmPassword") String confirmPassword,
+			//@RequestParam("confirmPassword") String confirmPassword,
             User muser, Model model) {
 		System.out.println("---Add User Starting-----");
 		
@@ -61,25 +61,11 @@ public class UserController {
 		muser.setContactNumber(contactNumber);
 		muser.setPassword(password);
 		muser.setAddress(address);
-		muser.setConfirmPassword(confirmPassword);
+		//muser.setConfirmPassword(confirmPassword);
 		
 	
 		
 		
-		userDAO.validateEmail(email);
-		if(muser!=null)
-		{
-			model.addAttribute("duplicateEmail","Email already exists!Please enter different Email Id!");
-		}
-
-	    
-		userDAO.validatecontactNumber(contactNumber);
-		if(muser!=null)
-		{
-		    model.addAttribute("duplicateCustomername","contactNumber already exists!Please enter different contactNumber");	
-		}
-		
-
 		
 		userDAO.addUser(muser);
 		//List<UserDetail> list = userdetailDAO.getUserDetailDetails();

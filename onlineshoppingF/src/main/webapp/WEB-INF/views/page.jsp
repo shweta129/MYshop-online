@@ -122,6 +122,12 @@
     <%@include file="Order.jsp"%>
     </c:if>  
     
+     <!--Load only when user click Order confirm -->
+    
+    <c:if test="${userClickConfirmOrder=='true'}">  <!-- get the user from the controller -->
+    <%@include file="visitagain.jsp"%>
+    </c:if>  
+    
     
     <!-- Footer -->
      <%@include file="./shared/footer.jsp"%>

@@ -43,7 +43,7 @@ public class User implements Serializable {
 	private boolean enabled = true;
 	
 	
-	//confirm password transient field
+	/*//confirm password transient field
 	@Transient
 	private String confirmPassword;
 	
@@ -53,7 +53,7 @@ public class User implements Serializable {
 	}
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
-	}
+	}*/
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -146,7 +146,7 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 				+ ", contactNumber=" + contactNumber + ", role=" + role + ", password=" + password + ", address="
-				+ address + ", enabled=" + enabled + ", confirmPassword=" + confirmPassword + ", cart=" + cart + "]";
+				+ address + ", enabled=" + enabled + ", cart=" + cart + "]";
 	}
 	
 	

@@ -1,4 +1,5 @@
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 
       <div class="container">

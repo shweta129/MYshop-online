@@ -133,7 +133,7 @@ assertEquals("Failed to add user!",true,userDAO.addUser(user));
 		user.setRole("USER");
 		user.setPassword("12345");
 		user.setAddress("Thane");
-		
+		user.setEnabled(true);
 
 if(user.getRole().equals("USER")) {
     	 
@@ -147,7 +147,7 @@ if(user.getRole().equals("USER")) {
 }
 
 //add the user
-assertEquals("Failed to add user!",true,userDAO.addUser(user));
+userDAO.addUser(user);
 }
 	
 	

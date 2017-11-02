@@ -127,6 +127,7 @@
        
       
        
+       
        <div class="form-group">
         <label for="address" class="col-md-4 control-label">Address</label>
          <div class="col-md-8">
@@ -134,11 +135,18 @@
          </div>
        </div>
        
+      <!--  <div class="form-group">
+        <label for="confirmPassword" class="col-md-4 control-label">Confirm Password:</label>
+         <div class="col-md-8">
+          <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" />
+         </div>
+       </div> -->
+       
        
         <div class="form-group">
         <div class="col-md-offset-4 col-md-8">
           <input type="submit" value="sign up" class="btn btn-primary" />
-          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+      <!--      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> -->
          </div>
        </div>
        

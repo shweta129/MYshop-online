@@ -10,7 +10,7 @@ public interface UserDAO {
 	
 	
 	//add an user
-		boolean addUser(User user);
+		void addUser(User user);
 		User getByEmail(String email);
 		User validateEmail(String email);
 	    User validatecontactNumber(String contactNumber);

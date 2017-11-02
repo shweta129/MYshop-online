@@ -121,7 +121,7 @@
        <div class="form-group">
         <div class="col-md-offset-4 col-md-8">
           <input type="submit" value="login" class="btn btn-primary" />
-          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+         <!--  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />  -->
          </div>
        </div>
        
