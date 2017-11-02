@@ -73,15 +73,15 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img class="d-block img-fluid" src="${images}/2.jpg" alt="First slide">
+      <img class="d-block img-fluid" src="${images}/1.jpg" alt="First slide">
     </div>
 
     <div class="item">
-     <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+     <img class="d-block img-fluid" src="${images}/22.jpg" alt="First slide">
              </div>
 
     <div class="item">
-     <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+     <img class="d-block img-fluid" src="${images}/3.jpg" alt="First slide">
               </div>
   </div>
 
@@ -102,13 +102,13 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="${images}/p8.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">Item One</a>
                   </h4>
                   <h5>$24.99</h5>
-                  <p class="card-text">Atractive laptops here, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <p class="card-text">Atractive TV here, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -118,7 +118,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="${images}/p2.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">Item Two</a>
@@ -134,7 +134,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="${images}/p3.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">Item Three</a>
@@ -150,7 +150,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="${images}/p4.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">Item Four</a>
@@ -166,7 +166,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="${images}/f1.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">Item Five</a>
@@ -182,7 +182,7 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="${images}/p7.jpg" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="#">Item Six</a>
