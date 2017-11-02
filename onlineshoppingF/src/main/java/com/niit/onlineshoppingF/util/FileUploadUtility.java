@@ -21,7 +21,7 @@ public static void uploadFile(HttpServletRequest request, MultipartFile file, St
 	
 	
 	//get the real path
-	REAL_PATH = request.getSession().getServletContext().getRealPath("/resources/image");
+	REAL_PATH = request.getSession().getServletContext().getRealPath("/resources/images");
 	
 	logger.info(REAL_PATH);
 	

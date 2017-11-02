@@ -39,6 +39,7 @@ public class User implements Serializable {
 	private String contactNumber;
 	private String role;
 	private String password;
+	private String address;
 	private boolean enabled = true;
 	
 	
@@ -61,7 +62,7 @@ public class User implements Serializable {
 
 
 	
-	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)//cascade tell what is attached to the child record
+	@OneToOne(cascade = CascadeType.ALL)//cascade tell what is attached to the child record
 	@JoinColumn(name ="cart_id")
 	private Cart cart;
 	
@@ -135,12 +136,19 @@ public class User implements Serializable {
 	 */
 	
 	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", contactNumber=" + contactNumber + ", role=" + role + ", password=" + password + ", enabled="
-				+ enabled + ", cart=" + cart + "]";
+				+ ", contactNumber=" + contactNumber + ", role=" + role + ", password=" + password + ", address="
+				+ address + ", enabled=" + enabled + ", confirmPassword=" + confirmPassword + ", cart=" + cart + "]";
 	}
+	
 	
 	
 	

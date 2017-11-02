@@ -1,11 +1,5 @@
-<br/>
-<br/>
-<br/>
-<br/><br/>
-<br/>
-<br/>
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
-<%@include file="../shared/flows-header.jsp"%>   
+  
       
       
       
@@ -23,18 +17,15 @@
    
    <div class="panel-body">
         
-    <sf:form
-     method="POST"
-     class="form-horizontal"
-     id="registerForm"
-     modelAttribute="user"
-    >
+    <form>
+    
+   
       
        
     <div class="form-group">
      <label class="control-label col-md-4">First Name</label>
      <div class="col-md-8">
-      <sf:input type="text" path="firstName" class="form-control"
+      <f:input type="text" path="firstName" class="form-control"
        placeholder="First Name" />
 		
 		<sf:errors path="firstName" cssClass="help-block" element="em"/>        
@@ -89,6 +80,21 @@
         </div>
        </div>
        
+       
+       <div class="form-group">
+        <label class="control-label col-md-4">address</label>
+        <div class="col-md-8">
+         <sf:input type="text" path="address" class="form-control"
+          placeholder="adress" />
+          
+          <sf:errors path="address" cssClass="help-block" element="em"/> 
+          
+          
+        </div>
+       </div>
+       
+       
+       
         <div class="form-group">
         <label class="control-label col-md-4">Confirm Password</label>
         <div class="col-md-8">
@@ -101,7 +107,7 @@
        </div>        
        
        
-       <!-- radio button using bootstrap class of radio-inline -->
+       <%-- <!-- radio button using bootstrap class of radio-inline -->
 	   <div class="form-group">
 	     <label class="control-label col-md-4">Select Role</label>
 	     <div class="col-md-8">
@@ -122,12 +128,12 @@
 				
 				Next - Billing <span class="glyphicon glyphicon-chevron-right"></span>
 			
-			</button>
+			</button> --%>
  
         </div>
        </div>
 
-      </sf:form>     
+      </form>   
      </div>
     </div>
    </div>
@@ -137,8 +143,4 @@
        
   </div>
            
-    
- <%@include file="../shared/flows-footer.jsp"%>   
-  <%-- <%@include file="../shared/flows-footer.jsp" %>
- --%>
     

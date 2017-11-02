@@ -60,14 +60,13 @@
 			
 			<div class="row">
 			
-				<div class="col-lg-12">
+				<div class="col-xs-12">
 				
 				
 					<div class="container-fluid">
 					
 						<div class="table-responsive">
 						
-				
 							<table id="productListTable" class="table table-striped table-borderd">
 							
 							
@@ -79,8 +78,8 @@
 										<th>Brand</th>
 										<th>Price</th>
 										<th>Qty. Available</th>
-										<th>Action</th>
-										
+										<th></th>
+									
 									</tr>
 								
 								</thead>
@@ -94,11 +93,7 @@
 										<th>Brand</th>
 										<th>Price</th>
 										<th>Qty. Available</th>
-										<th>Action</th>
-										
-										
-										
-										
+										<th></th>
 									
 									</tr>
 								
@@ -128,7 +123,3 @@
 
 
 </div>
-<br>
-<br>
-<br>
-<br><br><br><br><br><br>

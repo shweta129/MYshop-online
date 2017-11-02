@@ -2,7 +2,7 @@ package com.niit.onlineshoppingB.dao;
 
 import java.util.List;
 
-import com.niit.onlineshoppingB.dto.Address;
+
 import com.niit.onlineshoppingB.dto.Cart;
 import com.niit.onlineshoppingB.dto.User;
 
@@ -14,11 +14,7 @@ public interface UserDAO {
 		User getByEmail(String email);
 		
 		// add an address
-			boolean addAddress(Address address);
 			
-			
-		     Address getBillingAddress(User user);
-			 List<Address> listShippingAddresses(User user);
 			
 		/*	alternative
 			Address getBillingAddress(int userId);

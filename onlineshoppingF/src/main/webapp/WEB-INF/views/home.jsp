@@ -73,7 +73,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+      <img class="d-block img-fluid" src="${images}/2.jpg" alt="First slide">
     </div>
 
     <div class="item">

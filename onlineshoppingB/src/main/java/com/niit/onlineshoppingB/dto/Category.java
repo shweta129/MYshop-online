@@ -30,12 +30,7 @@ public class Category
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getImageURL() {
-		return imageURL;
-	}
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
-	}
+	
 	public boolean isActive() {
 		return active;
 	}
@@ -45,16 +40,22 @@ public class Category
 	
 	
 	
-	
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageURL=" + imageURL
-				+ ", active=" + active + "]";
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", active=" + active + "]";
 	}
+	
 
 	/*
 	 * *private fields
 	 */
+
+	
+
+
+
+
+
 
 	@Id
 	
@@ -63,8 +64,7 @@ public class Category
 	private String name;
 	private String description;
 	
-	@Column(name = "image_url")
-	private String imageURL;
+	
 	
 	@Column(name = "is_active")
 	private boolean active = true; //i also deactivate category ( by admin)

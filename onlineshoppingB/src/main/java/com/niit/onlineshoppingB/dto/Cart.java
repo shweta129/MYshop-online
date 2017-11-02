@@ -1,12 +1,16 @@
 package com.niit.onlineshoppingB.dto;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -14,72 +18,45 @@ import javax.persistence.Table;
 public class Cart implements Serializable{
 	
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-
-	/*
-	 * private field
-	 */
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	@Column(name = "grand_total")
-	private double grandTotal;
-	@Column(name = "cart_lines")
-	private int cartLines;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int cartid;
+	
+    private double grandTotal;
+	@OneToOne
+	@JoinColumn(name="user_id")
+	 private User user;
+	@OneToMany(mappedBy="cart",fetch=FetchType.EAGER)
+	private List<CartItem> cartItems;
 	
 	
 	
-
-	/*
-	 * setter getter method
-	 * 
-	 */
-
-	public int getId() {
-		return id;
+	
+	
+	
+	public int getCartid() {
+		return cartid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCartid(int cartid) {
+		this.cartid = cartid;
 	}
-	
 	public double getGrandTotal() {
 		return grandTotal;
 	}
 	public void setGrandTotal(double grandTotal) {
 		this.grandTotal = grandTotal;
 	}
-	public int getCartLines() {
-		return cartLines;
-	}
-	public void setCartLines(int cartLines) {
-		this.cartLines = cartLines;
-	}
-	
-	
-	
-	
-
-	/*
-	 * 
-	 * to string for logging and debugging activity
-	 */
-	@Override
-	public String toString() {
-		return "Cart [id=" + id + ", grandTotal=" + grandTotal + ", cartLines=" + cartLines + ", user=" + user + "]";
-	}
-	
-	
-	
-	@OneToOne
-	private User user;
 	public User getUser() {
 		return user;
 	}
-	public void setUser(User user) {
+	public void setUser(User user_id) {
 		this.user = user;
 	}
+	public List<CartItem> getCartItems() {
+		return cartItems;
+	}
+	public void setCartItems(List<CartItem> cartItems) {
+		this.cartItems = cartItems;
+	}
+	
 }

@@ -30,11 +30,14 @@
               <a class="nav-link" href="${contextRoot}/show/all/products">View Products</a>
             </li>
             
+            <c:if test = "${pageContext.request.userPrincipal.name!=null}">
             <security:authorize access="hasAuthority('ADMIN')">
+            
              <li class="nav-item" id="manageProducts">
               <a class="nav-link" href="${contextRoot}/manage/products">Manage Products</a>
             </li>
             </security:authorize>
+            </c:if>
            </ul>
           
           <ul class="nav navbar-nav navbar-right">
@@ -51,25 +54,17 @@
             
             <li class="dropdown" id="userCart">
             
-               <a href="javascript:void(0)"
-                  class="btn btn-default dropdown-toggle"
-                  id="dropdownMenu1"
-                  data-toggle="dropdown">
-                  
-                 ${userModel.fullName}
-                  <span class="caret"></span>
-                  
-                </a>
+               <c:if test = "${pageContext.request.userPrincipal.name!=null}">
+               <a href="">Hello ${pageContext.request.userPrincipal.name}</a>
+               </c:if>
             
             <ul class="dropdown-menu">
             <!-- display the cart -->
             <security:authorize access="hasAuthority('USER')">
             <li>
-               <a href="${contextRoot}/cart/show">
+               <a href="${contextRoot}/cart/getcart">
                  <span class="glyphicon glyphicon-shopping-cart"></span>
-                 <span class="badge">${userModel.cart.cartLines}</span>
-                 - &#8377; ${userModel.cart.grandTotal}
-              
+            
                </a>
             </li>
             
@@ -78,10 +73,11 @@
             <li class="divider" role="separator" ></li>
             </security:authorize>
             <!--  this is for logout-->
-            <li>
-               <a href="${contextRoot}/perform-logout">Logout</a>
-            
-            </li>
+           
+            <c:if test = "${pageContext.request.userPrincipal.name!=null}">
+            <li id = logout><a href="${contextRoot}/j_spring_security_logout">Logout</a> </li>
+            </c:if>
+           
             
             </ul>
             </li>

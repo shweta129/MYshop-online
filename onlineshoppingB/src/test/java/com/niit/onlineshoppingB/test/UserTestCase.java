@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.niit.onlineshoppingB.dao.UserDAO;
-import com.niit.onlineshoppingB.dto.Address;
+
 import com.niit.onlineshoppingB.dto.Cart;
 import com.niit.onlineshoppingB.dto.User;
 
@@ -18,7 +18,7 @@ public class UserTestCase {
 	private static UserDAO userDAO;
 	private User user = null;
 	private Cart cart = null;
-	private Address address = null;
+	
 	
 	
 	@BeforeClass
@@ -126,12 +126,13 @@ assertEquals("Failed to add user!",true,userDAO.addUser(user));
 	public  void testAdd() {
 		
 		user = new User();
-		user.setFirstName("");
-		user.setLastName("sam");
+		user.setFirstName("Sandy");
+		user.setLastName("patil");
 		user.setEmail("s@gmail.com");
 		user.setContactNumber("1234512345");
 		user.setRole("USER");
 		user.setPassword("12345");
+		user.setAddress("Thane");
 		
 
 if(user.getRole().equals("USER")) {
@@ -243,16 +244,6 @@ assertEquals("Failed to add user!",true,userDAO.addUser(user));
 				
 			}*/
 	
-	//@Test
-	public void testGetAddresses() {
-		
-		user = userDAO.getByEmail("hr@gmail.com");
-
-		assertEquals("Failed to fetch the list of address and size does not match!",1, 
-				userDAO.listShippingAddresses(user).size());
-		
-		/*assertEquals("Failed to fetch the billing address and size does not match!","Mumbai", 
-				userDAO.getBillingAddress(user).getCity());	*/
-	}
+	
 	
 }

@@ -2,6 +2,7 @@ package com.niit.onlineshoppingB.daoImpl;
 
 import java.util.List;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -144,6 +145,13 @@ public class ProductDAOImpl implements ProductDAO {
 		return sessionFactory.getCurrentSession().createQuery("FROM Product WHERE active = :active ORDER BY id", Product.class).setParameter("active", true).setFirstResult(0).setMaxResults(count).getResultList();
 		
 	
+	}
+
+	public Product getProduct(int productid) {
+		Session session = sessionFactory.openSession();
+		Product product = (Product)session.get(Product.class, productid);
+		session.close();
+		return product;
 	}
 
 }

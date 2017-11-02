@@ -144,16 +144,6 @@ public class PageController
 	 
  }
  
- //having similar mapping to our flow id
- @RequestMapping(value= "/register")
- public ModelAndView register()
-	{
-		ModelAndView mv=new ModelAndView("page");
-		
-		mv.addObject("title","About Us");
-		
-		return mv;
-	}
  
  
  
@@ -196,21 +186,8 @@ public class PageController
  
  
  
- //logout
-    @RequestMapping(value= "/perform-logout")
-    public String logout(HttpServletRequest request,HttpServletResponse response) {
-    	
-    	//first we are login to fetch the authantication
-    	
-    	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-    	
-    	if(auth!=null) {
-    		
-    		new SecurityContextLogoutHandler().logout(request,response,auth);
-    	}
-    	
-    	return "redirect:/login?logout";
-    }
+
+   
  
  
  
