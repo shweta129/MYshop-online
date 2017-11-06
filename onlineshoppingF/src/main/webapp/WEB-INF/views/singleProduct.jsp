@@ -88,12 +88,7 @@
       </security:authorize>
       
       <security:authorize access="hasAuthority('ADMIN')">
-      
-          <a href="${contextRoot}/cart/add/${product.id}/product" class="btn btn-success">
-          <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
-      
-     
-      
+       
       <a href="${contextRoot}/manage/${product.id}/product" class="btn btn-warning">
       <span class="glyphicon glyphicon-pencil"></span> Edit</a>
        </security:authorize>

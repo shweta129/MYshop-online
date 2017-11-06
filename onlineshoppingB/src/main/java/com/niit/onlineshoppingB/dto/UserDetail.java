@@ -15,7 +15,7 @@ import javax.persistence.Transient;
 
 @Entity
 @Table(name = "user_details")
-public class User implements Serializable {
+public class UserDetail implements Serializable {
 	
 	
 	/**

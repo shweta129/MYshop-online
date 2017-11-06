@@ -30,14 +30,14 @@
     			<div class="col-xs-4">
         			<address>
     				<strong>Billing Address:</strong><br>
-                         ${order.cart.user.address}
+                         ${order.cart.userdetail.address}
     				</address>
 
     			</div>
     			<div class="col-xs-4">
         			<address>
     				<strong>Shipping Address:</strong><br>
-                         ${order.cart.user.address}
+                         ${order.cart.userdetail.address}
     				</address>
     			</div>
     			 <div class="col-xs-4 text-right">

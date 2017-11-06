@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.onlineshoppingB.dao.UserDAO;
-import com.niit.onlineshoppingB.dto.User;
+import com.niit.onlineshoppingB.dto.UserDetail;
 
 @Controller
 @RequestMapping("/register")
@@ -30,7 +30,7 @@ public class UserController {
 		
 		mv.addObject("userClickSignup", true);
 		mv.addObject("title", "Registration");
-		User user = new User();
+		UserDetail userdetail = new UserDetail();
 		//Set the few fields
 		//userdetail.setRole("User");
 		
@@ -52,22 +52,22 @@ public class UserController {
 		    @RequestParam("password") String password,
 			@RequestParam("address") String address,
 			//@RequestParam("confirmPassword") String confirmPassword,
-            User muser, Model model) {
+            UserDetail muserdetail, Model model) {
 		System.out.println("---Add User Starting-----");
 		
-		muser.setFirstName(firstName);
-		muser.setLastName(lastName);
-		muser.setEmail(email);
-		muser.setContactNumber(contactNumber);
-		muser.setPassword(password);
-		muser.setAddress(address);
+		muserdetail.setFirstName(firstName);
+		muserdetail.setLastName(lastName);
+		muserdetail.setEmail(email);
+		muserdetail.setContactNumber(contactNumber);
+		muserdetail.setPassword(password);
+		muserdetail.setAddress(address);
 		//muser.setConfirmPassword(confirmPassword);
 		
 	
 		
 		
 		
-		userDAO.addUser(muser);
+		userDAO.addUser(muserdetail);
 		//List<UserDetail> list = userdetailDAO.getUserDetailDetails();
 		//m.addAttribute("UserDetail", list);
 

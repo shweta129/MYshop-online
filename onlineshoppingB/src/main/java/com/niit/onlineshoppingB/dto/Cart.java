@@ -25,7 +25,7 @@ public class Cart implements Serializable{
     private double grandTotal;
 	@OneToOne
 	@JoinColumn(name="user_id")
-	 private User user;
+	 private UserDetail userdetail;
 	@OneToMany(mappedBy="cart",fetch=FetchType.EAGER)
 	private List<CartItem> cartItems;
 	
@@ -46,11 +46,12 @@ public class Cart implements Serializable{
 	public void setGrandTotal(double grandTotal) {
 		this.grandTotal = grandTotal;
 	}
-	public User getUser() {
-		return user;
+	
+	public UserDetail getUserdetail() {
+		return userdetail;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserdetail(UserDetail userdetail) {
+		this.userdetail = userdetail;
 	}
 	public List<CartItem> getCartItems() {
 		return cartItems;

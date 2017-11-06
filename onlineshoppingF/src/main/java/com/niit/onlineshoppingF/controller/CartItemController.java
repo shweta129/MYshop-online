@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
-
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +18,7 @@ import com.niit.onlineshoppingB.dao.UserDAO;
 import com.niit.onlineshoppingB.dto.Cart;
 import com.niit.onlineshoppingB.dto.CartItem;
 import com.niit.onlineshoppingB.dto.Product;
-import com.niit.onlineshoppingB.dto.User;
+import com.niit.onlineshoppingB.dto.UserDetail;
 
 @Controller
 public class CartItemController {
@@ -45,15 +45,19 @@ public class CartItemController {
 	      @RequestMapping("/cart/getcart")
 	      public ModelAndView getCart(Model model)
 	      {
-	    	  System.out.println("get cart method");
+	    	  System.out.println("In get cart method");
 	    	  ModelAndView mv=new ModelAndView("page");
+	    	  System.out.println("Cart 1");
 	    	  mv.addObject("userClickCart", true);
+	    	  System.out.println("Cart 2");
 	    	  mv.addObject("title", "Cart");
-	      User user1=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-	  		String email=user1.getEmail();
-	  		 User user=userDAO.getByEmail(email);
+	    	  System.out.println("Cart 3");
+	      User user=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+	      System.out.println(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+	  		String email=user.getUsername();
+	  		 UserDetail userdetail=userDAO.getByEmail(email);
 	  		 System.out.println("get cart method after 57 line");
-	  		Cart cart=user.getCart();
+	  		Cart cart=userdetail.getCart();
 	  		 model.addAttribute("cart", cart);
 	  		 return mv;
 	      }
@@ -70,10 +74,10 @@ public class CartItemController {
 		  
 	   //To get the user details, get the Principal object from securitycontextholder
 			System.out.println(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-			User user1=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-			String email=user1.getEmail();
-			 User user=userDAO.getByEmail(email);
-			 Cart cart=user.getCart();
+			User user=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			String email=user.getUsername();
+			 UserDetail userdetail=userDAO.getByEmail(email);
+			 Cart cart=userdetail.getCart();
 			 List<CartItem> cartItems=cart.getCartItems();
 			 System.out.println(cart.getCartItems().size());
 			 
@@ -84,10 +88,8 @@ public class CartItemController {
 				 System.out.println(id);
 				  if(cartItem.getProduct().getId()==id)
 				  {
+					  
 					  cartItem.setQuantity(units);
-					  
-					  
-					
 					  cartItem.setTotalPrice(product.getUnitPrice() * units);
 					  cartItemDAO.addCartItem(cartItem);//update cartitem units & totalprice
 					  return "redirect:/cart/getcart";

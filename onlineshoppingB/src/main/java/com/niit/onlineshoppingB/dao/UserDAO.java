@@ -4,16 +4,16 @@ import java.util.List;
 
 
 import com.niit.onlineshoppingB.dto.Cart;
-import com.niit.onlineshoppingB.dto.User;
+import com.niit.onlineshoppingB.dto.UserDetail;
 
 public interface UserDAO {
 	
 	
 	//add an user
-		void addUser(User user);
-		User getByEmail(String email);
-		User validateEmail(String email);
-	    User validatecontactNumber(String contactNumber);
+		void addUser(UserDetail user);
+		UserDetail getByEmail(String email);
+		UserDetail validateEmail(String email);
+	    UserDetail validatecontactNumber(String contactNumber);
 		
 		// add an address
 			

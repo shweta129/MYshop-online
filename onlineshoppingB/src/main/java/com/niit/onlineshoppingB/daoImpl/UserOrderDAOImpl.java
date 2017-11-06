@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.niit.onlineshoppingB.dao.UserOrderDAO;
 import com.niit.onlineshoppingB.dto.Cart;
 import com.niit.onlineshoppingB.dto.CartItem;
-import com.niit.onlineshoppingB.dto.User;
+import com.niit.onlineshoppingB.dto.UserDetail;
 import com.niit.onlineshoppingB.dto.UserOrder;
 
 @Repository("userOrderDAO")
@@ -35,12 +35,12 @@ public class UserOrderDAOImpl implements UserOrderDAO {
 			grandTotal=cartItem.getTotalPrice()+grandTotal;
 		}
 		cart.setGrandTotal(grandTotal);
-		User user=cart.getUser();
+		UserDetail userdetail=cart.getUserdetail();
 		UserOrder userorder=new UserOrder();
 		userorder.setPurchaseDate(new Date());
 		userorder.setCart(cart);
 		//userdetail.setAddress(userdetail.getAddress());
-		userorder.setUser(user);
+		userorder.setUserdetail(userdetail);
 		
 		
 		session.save(userorder);//insert, also execute update queries for other tables

@@ -40,7 +40,7 @@
              <!-- this is for cart -->
           
            <security:authorize access="hasAuthority('USER')">
-            <li id="cart"><a href="${contextRoot}/cart/getcart"><i class="glyphicon glyphicon-shopping-cart"> welcome </i></a></li> 
+            <li id="cart"><a class="nav-link" href="${contextRoot}/cart/getcart">Cart</a></li> 
       	   </security:authorize>
             
             
@@ -79,17 +79,9 @@
         <li id=logout><a href="${contextRoot}/j_spring_security_logout">Logout</a></li>
         </c:if>
         </ul>
-         <%--  <ul class="nav navbar-nav navbar-right">
-            <security:authorize access="isAnonymous()">
-            <li class="nav-item" id="register">
-              <a class="nav-link" href="${contextRoot}/register">Sign Up</a>
-            </li>
-            <li class="nav-item" id="login">
-              <a class="nav-link" href="${contextRoot}/login">Login</a>
-            </li>
-            </security:authorize> --%>
+        
             
-            <security:authorize access="isAuthenticated()">
+             <security:authorize access="isAuthenticated()">
             
             <li class="dropdown" id="userCart">
             
@@ -102,26 +94,26 @@
             <security:authorize access="hasAuthority('USER')">
             <li>
                <a href="${contextRoot}/cart/getcart">
-                 <span class="glyphicon glyphicon-shopping-cart"></span>
+               <span class="glyphicon glyphicon-shopping-cart"></span>
             
                </a>
             </li>
             
             
-            <!-- this is for divider -->
-            <li class="divider" role="separator" ></li>
+           <!--  <!-- this is for divider
+            <li class="divider" role="separator" ></li> -->
             </security:authorize>
             <!--  this is for logout-->
            
-            <c:if test = "${pageContext.request.userPrincipal.name!=null}">
+            <%-- <c:if test = "${pageContext.request.userPrincipal.name!=null}">
             <li id = logout><a href="${contextRoot}/j_spring_security_logout">Logout</a> </li>
-            </c:if>
+            </c:if> --%>
            
             
             </ul>
             </li>
             
-            </security:authorize>
+            </security:authorize> 
            
           </ul>
         </div>

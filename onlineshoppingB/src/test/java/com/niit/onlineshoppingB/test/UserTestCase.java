@@ -9,14 +9,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.niit.onlineshoppingB.dao.UserDAO;
 
 import com.niit.onlineshoppingB.dto.Cart;
-import com.niit.onlineshoppingB.dto.User;
+import com.niit.onlineshoppingB.dto.UserDetail;
 
 public class UserTestCase {
 
 	
 	private static AnnotationConfigApplicationContext context;
 	private static UserDAO userDAO;
-	private User user = null;
+	private UserDetail userdetail = null;
 	private Cart cart = null;
 	
 	
@@ -125,29 +125,29 @@ assertEquals("Failed to add user!",true,userDAO.addUser(user));
 	@Test
 	public  void testAdd() {
 		
-		user = new User();
-		user.setFirstName("Sandy");
-		user.setLastName("patil");
-		user.setEmail("s@gmail.com");
-		user.setContactNumber("1234512345");
-		user.setRole("USER");
-		user.setPassword("12345");
-		user.setAddress("Thane");
-		user.setEnabled(true);
+		userdetail = new UserDetail();
+		userdetail.setFirstName("Sandy");
+		userdetail.setLastName("patil");
+		userdetail.setEmail("s@gmail.com");
+		userdetail.setContactNumber("1234512345");
+		userdetail.setRole("USER");
+		userdetail.setPassword("12345");
+		userdetail.setAddress("Thane");
+		userdetail.setEnabled(true);
 
-if(user.getRole().equals("USER")) {
+if(userdetail.getRole().equals("USER")) {
     	 
     	 //create a cart for this user
     	 cart = new Cart();
     	 
-    	 cart.setUser(user);
+    	 cart.setUserdetail(userdetail);
     	 
     	 //attach cart with user
-   	  user.setCart(cart);   	 
+   	  userdetail.setCart(cart);   	 
 }
 
 //add the user
-userDAO.addUser(user);
+userDAO.addUser(userdetail);
 }
 	
 	

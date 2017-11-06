@@ -143,7 +143,13 @@
    </div> 
     
     </div>
-    
+    <br>
+    <br>
+    <br> <br>
+    <br>
+    <br> <br>
+    <br>
+    <br>
     <!-- Footer -->
      <%@include file="./shared/footer.jsp"%>
       
@@ -157,6 +163,8 @@
     
     <!-- self coded javascript -->
     <script src="${js}/myapp.js"></script>
+    <br>
+   
   </body>
 
 </html>

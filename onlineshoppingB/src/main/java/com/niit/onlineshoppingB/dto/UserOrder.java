@@ -22,7 +22,7 @@ public class UserOrder {
 	  private Cart cart;
 	  @ManyToOne(cascade=CascadeType.ALL)
 	  @JoinColumn(name="user_id")
-	  private User user;
+	  private UserDetail userdetail;
 	public int getOrderId() {
 		return orderId;
 	}
@@ -41,13 +41,13 @@ public class UserOrder {
 	public void setCart(Cart cart) {
 		this.cart = cart;
 	}
-	public User getUser() {
-		return user;
+	public UserDetail getUserdetail() {
+		return userdetail;
 	}
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserdetail(UserDetail userdetail) {
+		this.userdetail = userdetail;
 	}
-	  
+	
 
 	  
 	  
