@@ -26,13 +26,23 @@
             
            
             <li class="nav-item" id="contact">
-              <a class="nav-link" href="${contextRoot}/contact">Contact</a>
+              <a class="nav-link" href="${contextRoot}/contact">Contact Us</a>
             </li>
             
             
             <li class="nav-item" id="ListProducts">
-              <a class="nav-link" href="${contextRoot}/show/all/products">View Products</a>
+               <a class="nav-link" href="${contextRoot}/show/all/products">View Products</a>
+               <c:if test = "${pageContext.request.userPrincipal.name!=null}">
+               </c:if>
             </li>
+            
+            
+             <!-- this is for cart -->
+          
+           <security:authorize access="hasAuthority('USER')">
+            <li id="cart"><a href="${contextRoot}/cart/getcart"><i class="glyphicon glyphicon-shopping-cart"> welcome </i></a></li> 
+      	   </security:authorize>
+            
             
             <!-- manage Product -->
             <c:if test = "${pageContext.request.userPrincipal.name!=null}">
@@ -45,11 +55,11 @@
             </c:if>
            </ul>
           
-          <!-- this is for cart -->
+         <%--  <!-- this is for cart -->
           
           <security:authorize access="hasAuthority('USER')">
-       <li id="cart"><a href="${contextRoot}/cart/getcart"><i class="material-icons"> welcome </i></a></li> 
-      	</security:authorize>
+       <li id="cart"><a href="${contextRoot}/cart/getcart"><i class="glyphicon glyphicon-cart"> welcome </i></a></li> 
+      	</security:authorize> --%>
           
           <!-- this is for login -->
           

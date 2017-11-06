@@ -24,7 +24,7 @@
 									</div>
 								</div>
 							</td>
-							<td data-th="Price">&#8377; ${cartItem.product.buyingPrice} /-</td>
+							<td data-th="Price">&#8377; ${cartItem.product.unitPrice} /-</td>
 							<td data-th="Quantity">${cartItem.quantity}</td>
 							<td data-th="Subtotal" class="text-center">${cartItem.totalPrice}</td>
 							 <td><a href="${contextRoot}/cart/removecartitem/${cartItem.cartItemId}" class="btn btn-danger pull-left ">

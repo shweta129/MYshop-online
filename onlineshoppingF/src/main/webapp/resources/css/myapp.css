@@ -16,6 +16,15 @@ body {
 .slide-image {
     width: 100%;
 }
+body
+{
+
+	background:url('${images}/download1.jpg') no-repeat;
+	
+	background-size:cover;
+	font-family:Arial;
+}
+
 
 .carousel-holder {
     margin-bottom: 30px;

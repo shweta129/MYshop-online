@@ -55,48 +55,50 @@
     <%@include file="./shared/navbar.jsp"%>
 
     <!--Loading home Content -->
-    <c:if test="${userClickHome=='true'}">   <!-- get the user from the controller -->
+    <!-- get the user from the controller -->
+    <c:if test="${userClickHome=='true'}">   
     <%@include file="home.jsp"%>
     </c:if>
     
     
     <!--Load only when user click about -->
-     <c:if test="${userClickAbout=='true'}">  <!-- get the user from the controller -->
+    <!-- get the user from the controller -->
+     <c:if test="${userClickAbout=='true'}">  
     <%@include file="about.jsp"%>
     </c:if>
     
 
    <!--Load only when user click contact -->
-    
-   <c:if test="${userClickContact=='true'}">  <!-- get the user from the controller -->
+   <!-- get the user from the controller --> 
+   <c:if test="${userClickContact=='true'}">  
     <%@include file="contact.jsp"%>
     </c:if>
     
     
-   <!--Load only when user click contact -->
-    
-   <c:if test="${userClickAllProducts=='true' or userClickCategoryProducts=='true'}">  <!-- get the user from the controller -->
-    <%@include file="listProducts.jsp"%>
+    <!--Load only when user click contact -->
+    <!-- get the user from the controller -->
+    <c:if test="${userClickAllProducts=='true' or userClickCategoryProducts=='true'}">  
+     <%@include file="listProducts.jsp"%>
     </c:if> 
     
     
-   <!--Load only when user click show product -->
-    
-   <c:if test="${userClickShowProduct=='true'}">  <!-- get the user from the controller -->
+    <!--Load only when user click show product -->
+    <!-- get the user from the controller -->
+   <c:if test="${userClickShowProduct=='true'}">  
     <%@include file="singleProduct.jsp"%>
     </c:if> 
     
-   <!--Load only when user click manage product -->
-    
-    <c:if test="${userClickManageProducts=='true'}">  <!-- get the user from the controller -->
+    <!--Load only when user click manage product -->
+    <!-- get the user from the controller -->
+    <c:if test="${userClickManageProducts=='true'}">  
     <%@include file="manageProducts.jsp"%>
     </c:if> 
     
     
     
-   <!--Load only when user click Show cart -->
-    
-    <c:if test="${userClickShowCart=='true'}">  <!-- get the user from the controller -->
+    <!--Load only when user click Show cart -->
+    <!-- get the user from the controller -->
+    <c:if test="${userClickCart=='true'}">  
     <%@include file="cart.jsp"%>
     </c:if> 
     
@@ -109,22 +111,22 @@
     </c:if>  --%>
     
    
-   <!--Load only when user click Signup -->
-    
-    <c:if test="${userClickSignup=='true'}">  <!-- get the user from the controller -->
+    <!--Load only when user click Signup -->
+    <!-- get the user from the controller -->
+    <c:if test="${userClickSignup=='true'}">  
     <%@include file="signup.jsp"%>
     </c:if>  
     
     
     <!--Load only when user click Order -->
-    
-    <c:if test="${userClickOrder=='true'}">  <!-- get the user from the controller -->
+    <!-- get the user from the controller -->
+    <c:if test="${userClickOrder=='true'}">  
     <%@include file="Order.jsp"%>
     </c:if>  
     
      <!--Load only when user click Order confirm -->
-    
-    <c:if test="${userClickConfirmOrder=='true'}">  <!-- get the user from the controller -->
+     <!-- get the user from the controller -->
+    <c:if test="${userClickConfirmOrder=='true'}"> 
     <%@include file="visitagain.jsp"%>
     </c:if>  
     

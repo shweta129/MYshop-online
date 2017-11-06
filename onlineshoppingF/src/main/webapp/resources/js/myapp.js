@@ -22,7 +22,7 @@ $(function() {
 		break;	
 		
 	case 'User Cart' :
-		$('#userCart').addClass('active');
+		$('#cart').addClass('active');
 		break;			
 		
 	default:
@@ -32,7 +32,7 @@ $(function() {
 	    break;
 	}
 	
-	//to tackle the csrf token
+	/*//to tackle the csrf token
 	var token = $('meta[name="_csrf"]').attr('content');
 	var header = $('meta[name="_csrf_header"]').attr('content');
 	
@@ -44,7 +44,7 @@ $(function() {
 			xhr.setRequestHeader(header,token);
 		});
 		
-	}
+	}*/
 	
 
 	// code for jquery dataTable
@@ -117,16 +117,18 @@ $(function() {
 			        		  str += '<a href="'+window.contextRoot+ '/show/'+data+'/product" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a> &#160;';
 
 			        		  if(userRole == 'ADMIN') {
+			        			 
 			        			  str += '<a href="'+window.contextRoot+ '/manage/'+data+'/product" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>';
+			        			 
 			        		  }
-			        		  else {
+			        		  /*else {
 				        		  if(row.quantity < 1) {
 				        			  str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
 				        		  }
 				        		  else {
 				        			  str += '<a href="'+window.contextRoot+ '/cart/add/'+data+'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';  
 				        		  }
-			        		  }
+			        		  }*/
 			        		  
 			        		  			        		  
 			        		  

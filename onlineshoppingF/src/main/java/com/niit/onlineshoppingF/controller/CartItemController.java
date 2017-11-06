@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,18 +15,15 @@ import org.springframework.web.servlet.ModelAndView;
 import com.niit.onlineshoppingB.dao.CartItemDAO;
 import com.niit.onlineshoppingB.dao.ProductDAO;
 import com.niit.onlineshoppingB.dao.UserDAO;
-import com.niit.onlineshoppingB.daoImpl.CartItemDAOImpl;
-import com.niit.onlineshoppingB.daoImpl.ProductDAOImpl;
-import com.niit.onlineshoppingB.daoImpl.UserDAOImpl;
 import com.niit.onlineshoppingB.dto.Cart;
 import com.niit.onlineshoppingB.dto.CartItem;
 import com.niit.onlineshoppingB.dto.Product;
 import com.niit.onlineshoppingB.dto.User;
 
 @Controller
-public class cartItemController {
+public class CartItemController {
 
-	 private static final String FirstName = null;
+	 
 	    @Autowired
 		ProductDAO productDAO;
 	    
@@ -33,11 +31,11 @@ public class cartItemController {
 	    UserDAO userDAO;
 	    
 	    @Autowired
-	   CartItemDAO cartItemDAO;
+	    CartItemDAO cartItemDAO;
 	    
 	    
 	   
-	    public void CartItemController()
+	    public CartItemController()
 	    {
 	    System.out.println("....");
 	   
@@ -68,6 +66,8 @@ public class cartItemController {
 		   mv.addObject("userClickCart",true);
 	       mv.addObject("title","Cart");
 		  Product product=productDAO.get(id);
+		  
+		  
 	   //To get the user details, get the Principal object from securitycontextholder
 			System.out.println(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
 			User user1=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -87,7 +87,7 @@ public class cartItemController {
 					  cartItem.setQuantity(units);
 					  
 					  
-					 ///?????
+					
 					  cartItem.setTotalPrice(product.getUnitPrice() * units);
 					  cartItemDAO.addCartItem(cartItem);//update cartitem units & totalprice
 					  return "redirect:/cart/getcart";
