@@ -147,9 +147,7 @@
     <br>
     <br> <br>
     <br>
-    <br> <br>
-    <br>
-    <br>
+   <br>
     <!-- Footer -->
      <%@include file="./shared/footer.jsp"%>
       
