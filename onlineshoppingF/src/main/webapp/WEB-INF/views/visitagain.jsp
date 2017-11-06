@@ -7,9 +7,20 @@
         <p>Your Order will be delivered in 4-5 Business Days. The Order is usually gets dispatched within 2 days. You will receive an email with the tracking details
         once the order is shipped.</p>
          
-   <h1>Thank You for shopping on Ecom Shopping!Please Visit Again!</h1>
+   <h1>Thank You for shopping on Ecom Shopping!</h1>
     <br><br>
         </div>
         
 	</div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -2,20 +2,26 @@
 <html>
 <body>
 
+<img class="card-img-top" src="${images}/download1.jpg" alt="">
+
+<div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">
+                    ABOUT ECOM<small>Founded in 1994 </small></h1>
+                    <p> ECOM has grown to be a Fortune 100 company. About Us | Careers | Press Releases | Gift a Smile</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+<br>
+<br>
 
 <div class="container">
-		<div class="jumbotron jumbotron-sm"
-			style="background-color: gray; margin-top: 2%; color: white;">
-			<div class="row">
-				<div class="col-sm-12 col-lg-12">
-					<h1 class="h2" style="margin-top: -2%">ABOUT ECOM</h1>
-					<p>Founded in 1994 and ECOM has grown to be a Fortune 100 company. About Us | Careers | Press Releases | Gift a Smile</p>
-				</div>
-			</div>
-		</div>
-	
+		
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="well">
